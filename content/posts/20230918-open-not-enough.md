@@ -20,7 +20,7 @@ Shit
 
 It's simply not. I remember my first foray into open computing. I started poking around IRC on a computer that was using AOL dial up. My brain exploded, the idea of people just sharing information and in my case at the time music blew my mind. I spent hours reading help files and honestly the curiosity to explore hidden rooms never left. I'll probably die getting stuck trying to find my way into some new secret library.
 
-  * [ ] People don't read things just because they exist. They don't learn math just because a book titled Math is in their backpack. Open source is a great ethos but its just one step in the game. We need to do better than just making things available. We need to share and encourage people to open the door. 
+People don't read things just because they exist. They don't learn math just because a book titled Math is in their backpack. Open source is a great ethos but its just one step in the game. We need to do better than just making things available. We need to share and encourage people to open the door. 
 
 When you read a book story what encourages the the eager to adventure? Do Merry and Pippin head off to far lands on the premise of someone calling them a [fucking idiot](https://github.com/corollari/linusrants)? Do they go just because Gondor exists? Of course not they follow the kind urging of Gandalf and the company of friends they trust. They go and despite learning the pain of war they help save their little world.
 
