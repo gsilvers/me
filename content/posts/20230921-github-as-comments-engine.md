@@ -1,7 +1,7 @@
 ---
 title: "20230921 GitHub as Comments Engine?"
 date: 2023-09-20T22:55:17-04:00
-draft: true
+draft: false
 ---
 
 # A smaller internet for end users
