@@ -10,7 +10,7 @@ This post is an older blog article I created when I tried out Medium a few years
 
 The original post is from September 2020. I'm pretty sure this still works but I don't interface with anything Oracle at my current job. If you have corrections
 
- I'd love to [speak about it with anyone](https://hachyderm.io/@getpoked@fosstodon.org) about updates please reach out and I will post your updates with credits.
+ I'd love to [speak about it with anyone](https://hachyderm.io/@pokeypoke) about updates please reach out and I will post your updates with credits.
 
 # Original Article 
 

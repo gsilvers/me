@@ -38,6 +38,6 @@ This is the type of thing we need to build more and more of. Valve seems to get 
 
 More importantly what can you and I do each day to help with this? How do we redirect people to better ways?
 
-I'm genuinely asking. Its on my mind and I absolutely have no complete answers.  I'd love to [speak about it with anyone](https://hachyderm.io/@getpoked@fosstodon.org) and if we have a good idea who knows do something actually about the mess together.
+I'm genuinely asking. Its on my mind and I absolutely have no complete answers.  I'd love to [speak about it with anyone](https://hachyderm.io/@pokeypoke) and if we have a good idea who knows do something actually about the mess together.
 
 Later!

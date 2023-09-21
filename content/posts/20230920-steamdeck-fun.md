@@ -43,6 +43,6 @@ This project may sound awful to you, and that's fine, the point being the device
 
 # Reach Out
 
-You can reach out to me if you want to talk about this.  I'd love to [speak about it with anyone](https://hachyderm.io/@getpoked@fosstodon.org).
+You can reach out to me if you want to talk about this.  I'd love to [speak about it with anyone](https://hachyderm.io/@pokeypoke).
 
 Later!
