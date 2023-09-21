@@ -46,4 +46,6 @@ I'm really not easy going when it comes to the isms. If you're going to get on s
 
 Other than that though I'm still a social butterfly, if you talk I'll listen and chat back doesn't matter what you're going on about. I'm really not active on much social media, I have been trying as of late [mastodon](https://hachyderm.io/@pokeypoke).
 
+If you think something here was helpful and want to throw some cash my way [pay up](https://ko-fi.com/gregsilverstein) 
+
 See you around.
