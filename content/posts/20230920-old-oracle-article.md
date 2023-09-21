@@ -1,7 +1,7 @@
 ---
 title: "20230920 Old Oracle Article"
 date: 2023-09-20T20:48:28-04:00
-draft: true
+draft: false
 ---
 
 # About this post
