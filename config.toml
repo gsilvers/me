@@ -49,7 +49,7 @@ paginate = 5
 
     [languages.en.params.logo]
       logoText = "./greg.out"
-      logoHomeLink = "/"
+      logoHomeLink = "/me"
     # or
     #
     # path = "/img/your-example-logo.svg"
