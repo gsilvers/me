@@ -26,6 +26,8 @@ I do not really work on any big open source projects but I do have GitHub accoun
 
 I'm not really hunting for a new role at the time but I keep a short [resume](https://gsilvers.github.io/me/posts/resume/ "resume") here on my blog and have a [LinkedIN](https://www.linkedin.com/in/greg-silverstein-5104619 "LinkedIN").
 
+I've never used it yet but I also have a twitch profile to stream from [link](https://www.twitch.tv/getpoked).
+
 I'm an Emacs user. Generally do my computing on some form of an apple laptop (although I'm writing this from a SteamDeck). I'm planning to try and get into basic game development over the next years and try to make a 2D game basically telling the life story of my dog. 
 
 # What do I do outside of work.
