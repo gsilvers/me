@@ -6,7 +6,7 @@ draft: false
 
 # Pixel art games
 
-So I've not written about this before but I'm hugely enamored with video games created with a pixel art style today. While I'm not against "big" games I do think its important to keep games accessable. I also really appreciate the detailed artwork and methods. 
+So I've not written about this before but I'm hugely enamored with video games created with a pixel art style today. While I'm not against "big" games I do think its important to keep games accessible. I also really appreciate the detailed artwork and methods. 
 
 # The feelz
 
@@ -22,7 +22,7 @@ The lighting continues to tell a story as you continue:
 
 ![llama in green light](/me/20230922/green_llama.png)
 
-THe greens are used here in a similar calm manner but with a bit more edge or anticipation to it. As you would expect for the color of most life there's more energy here as you continue with the llama following you. The single orange tinted light source also hints of more to come. Again simple tricks of contrast and the beams of light traced by hand not by an RTX card give a sense of depth and a "roof" to the scene.
+The greens are used here in a similar calm manner but with a bit more edge or anticipation to it. As you would expect for the color of most life there's more energy here as you continue with the llama following you. The single orange tinted light source also hints of more to come. Again simple tricks of contrast and the beams of light traced by hand not by an RTX card give a sense of depth and a "roof" to the scene.
 
 Later as you realize a failing light or lack of it can help explain sorrow:
 
