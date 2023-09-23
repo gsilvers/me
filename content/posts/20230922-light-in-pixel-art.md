@@ -16,9 +16,9 @@ I find it amazing how the highlight color can communicate mood so well in these 
 
 ![llama in blue light](/me/20230922/blue_llama.png)
 
-The image is essentially white, black and a deep blue with shades of each. The dark is not frightening in this case but rather tranquil. The slight white edging to blue highlights exudes calm and quiet. Which it does the scene is from [One Dreamer](https://store.steampowered.com/app/1156380/One_Dreamer/) which is a beautiful game and very much an exploration of someones memories both good and bad.
+The image is essentially white, black and a deep blue with shades of each. The dark is not frightening in this case but rather tranquil. The slight white edging to blue highlights exudes calm and quiet. Which it does the scene is from [One Dreamer](https://store.steampowered.com/app/1156380/One_Dreamer/) which is a beautiful game and very much an exploration of someones memories both good and bad. In this case the game is sharing a contented memory of the past. An artifact of your friendships.
 
-The lighting continues to tell a story as you continue:
+The lighting continues to tell a story as you learn about the llama:
 
 ![llama in green light](/me/20230922/green_llama.png)
 
