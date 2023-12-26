@@ -1,6 +1,6 @@
 ---
 title: "20230923 Nearly the End of the Year"
-date: 2023-12-25:28:25-04:00
+date: 2023-12-25:11:25-04:00
 draft: false
 ---
 
