@@ -1,7 +1,7 @@
 ---
 title: “Focusing on the wrong things"
 date: 2023-10-30T19:54:51-04:00
-draft: true
+draft: false
 ---
 
 Lately I have been thinking a lot on what consumes my minds time. Specifically when I am consumed with things that I cannot or face insurmountable barriers too. 
