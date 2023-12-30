@@ -6,6 +6,7 @@ title = 'My home on the web'
 # Remove it if you use the theme as a remote Hugo Module.
 theme = "hello-friend"
 paginate = 5
+builddrafts = true
 
 [params]
   # dir name of your blog content (default is `content/posts`).
@@ -31,21 +32,20 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "./greg.out"
-    subtitle = "Greg Silverstein's Home on the internet"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    writtenBy = "Written by"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
-    # leave empty to disable, enter display text to enable
-    # lastModDisplay = ""
+    [language.en.params]
+      title = "./greg.out"
+      subtitle = "Greg Silverstein's Home on the internet"
+      keywords = ""
+      copyright = ""
+      menuMore = "Show more"
+      writtenBy = "Written by"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      minuteReadingTime = "min read"
+      dateFormatSingle = "2006-01-02"
+      dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
       logoText = "./greg.out"

@@ -1,8 +1,9 @@
 ---
-title: "20230923 Nearly the End of the Year"
-date: 2023-12-25:11:25-04:00
+title: "20231225 Reflecting"
+date: 2023-12-25T22:56:52-05:00
 draft: false
 ---
+
 
 # This year...
 
@@ -36,4 +37,3 @@ Is almost over. I'm not sure how I feel about the time and myself and how we did
 
 
 Overall I think this year was a big up swing. I'm looking forward to addressing some of the faults identified above but I'm glad to get started on this early so I can refine this a bit. 
-

@@ -1,5 +1,5 @@
 ---
-title: "20230923-janet-rules"
+title: "20231125-janet-rules"
 date: 2023-11-25T20:20:00-00:00
 draft: false
 ---
