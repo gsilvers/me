@@ -18,4 +18,4 @@ I really have no answers, I sort of think the right answer is something like jus
 
 UGH
 
-Why are there so many tools in the way of just posting dog pics somewhere I have more agency over.
+Why are there so many tools in the way of just posting dog pics somewhere I have more agency over. It seems like it should be easy I can just use a repo full of markdown like this quick test of codeberg [here](https://codeberg.org/gsilvers/test_markdown). I can write markdown, post a photo and put up content on the web from anything.
