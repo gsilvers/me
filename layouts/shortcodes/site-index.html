@@ -1,0 +1,9 @@
+<ul>
+  {{ range sort site.RegularPages "Title" "desc" }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ with .Date }} — {{ .Format "2006-01-02" }}{{ end }}
+    </li>
+  {{ end }}
+</ul>
+
