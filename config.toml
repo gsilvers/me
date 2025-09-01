@@ -4,9 +4,11 @@ languageCode = "en-us"
 title = 'My home on the web'
 # Add it only if you keep the theme in the `themes` directory.
 # Remove it if you use the theme as a remote Hugo Module.
-theme = "hello-friend"
-paginate = 5
+theme = "ananke"
+pagination.pagerSize = 5
 builddrafts = true
+googleAnalytics = ""
+
 
 [params]
   # dir name of your blog content (default is `content/posts`).

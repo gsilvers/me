@@ -1,42 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hello Friend</title>
-    
-    
-    
-    <link>/</link>
-    <description>Recent content on Hello Friend</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 25 Mar 2023 19:11:45 -0400</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <title>Site Index on My home on the web</title>
+    <link>http://localhost:1313/me/</link>
+    <description>Recent content in Site Index on My home on the web</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jul 2024 21:37:13 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20240702 Funny Webpage</title>
+      <link>http://localhost:1313/me/posts/20240702_funny_page/</link>
+      <pubDate>Mon, 01 Jul 2024 21:37:13 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20240702_funny_page/</guid>
+      <description>&lt;h1 id=&#34;this-is-cute-now-im-hungry&#34;&gt;This is cute now I&amp;rsquo;m hungry&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://rotatingsandwiches.com&#34;&gt;Sandwiches!!&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Feed me!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20240518 How to Blog</title>
+      <link>http://localhost:1313/me/posts/20240518-how-to-blog/</link>
+      <pubDate>Sat, 18 May 2024 21:37:13 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20240518-how-to-blog/</guid>
+      <description>&lt;h1 id=&#34;im-torn&#34;&gt;I&amp;rsquo;m Torn&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m having moments of indecision about how to blog and what things I use. I&amp;rsquo;ve been reading &lt;a href=&#34;https://www.todepond.com/wikiblogarden/my-wikiblogarden/pictures/serious/&#34;&gt;this post&lt;/a&gt; over and over. It&amp;rsquo;s a great post and it challenges some of what I think of as good enough and portable enough.&lt;/p&gt;&#xA;&lt;p&gt;I write infrequently here and why? Because I use &lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt; and &lt;a href=&#34;https://docs.github.com/en/actions&#34;&gt;github actions&lt;/a&gt; to run my blog. I could in theory write posts from my mobile and other devices. All I really need to do is post markdown to github, push to main and off we go. But its slow, when I&amp;rsquo;m not on a desktop computer its tedious. Posting pictures is tedious.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20231229 Hugo Errors Ick</title>
+      <link>http://localhost:1313/me/posts/20231229-hugo-errors-ick/</link>
+      <pubDate>Fri, 29 Dec 2023 22:52:55 -0500</pubDate>
+      <guid>http://localhost:1313/me/posts/20231229-hugo-errors-ick/</guid>
+      <description>&lt;p&gt;Just a little blurb here. Hugo errors are not the best. I love this tool as it allows me to write a post like this lightening fast. I had done something to my local repo and when I was running &lt;code&gt;hugo server -D&lt;/code&gt; I was getting just a generic page not found error.&lt;/p&gt;&#xA;&lt;p&gt;Turns out if you hit that and you&amp;rsquo;re using a theme cloned in as a submodule you should:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20231225 Reflecting</title>
+      <link>http://localhost:1313/me/posts/20231225-reflecting/</link>
+      <pubDate>Mon, 25 Dec 2023 22:56:52 -0500</pubDate>
+      <guid>http://localhost:1313/me/posts/20231225-reflecting/</guid>
+      <description>&lt;h1 id=&#34;this-year&#34;&gt;This year&amp;hellip;&lt;/h1&gt;&#xA;&lt;p&gt;Is almost over. I&amp;rsquo;m not sure how I feel about the time and myself and how we did together yet. I&amp;rsquo;m doing a bit of new years reflection early. Hopefully some preparation will help me make good plans or resolutions rather than desperate prayers which will go to the waste basket.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-went-well&#34;&gt;What Went Well&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I did a ton more exercise than I&amp;rsquo;ve done in about a decade. I&amp;rsquo;ve ridden hundreds on miles on my bike and made a good habit of doing so.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve done more for my health than I&amp;rsquo;ve done in decades. Between the above exercise, seeing doctors and improving my diet I&amp;rsquo;m doing better by my meat suit than I&amp;rsquo;ve done in a long time.&lt;/li&gt;&#xA;&lt;li&gt;I was able to cut down on cruft in my life.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve been far more attentive to my partner, pets and family.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve partaken in far more group activities in cycling and gaming than I have in a decade.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve slowed down and listened to others more than trying to bowl my way throw everything head first.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve used Emacs nearly 100% of my coding time and I&amp;rsquo;ve reaped a lot of benefits in performance.&lt;/li&gt;&#xA;&lt;li&gt;I recorded notes, journals and just my ideas a lot more than before.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-did-not&#34;&gt;What Did Not&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I still find myself spending tons of time checking click bait news and still logging into social media like Facebook rather than Mastodon or just not at all.&lt;/li&gt;&#xA;&lt;li&gt;I did not read nearly as many books as I would like.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve not made any &amp;ldquo;good&amp;rdquo; friends through activities yet.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve not been as frugal as I&amp;rsquo;d like.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve not blogged or created pixel art as much as I&amp;rsquo;d like.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve not slowed down enough and listened enough.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;m still not making as much time for the right activities for example cycling in the morning so I can get it in before things interrupt me.&lt;/li&gt;&#xA;&lt;li&gt;I still have not found a great way to capture non text notes.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;new-ideals&#34;&gt;New Ideals&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I&amp;rsquo;d like to adopt literate programming in my day to day work as best as I can.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Overall I think this year was a big up swing. I&amp;rsquo;m looking forward to addressing some of the faults identified above but I&amp;rsquo;m glad to get started on this early so I can refine this a bit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20231125-janet-rules</title>
+      <link>http://localhost:1313/me/posts/20231125-janet-rules/</link>
+      <pubDate>Sat, 25 Nov 2023 20:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/me/posts/20231125-janet-rules/</guid>
+      <description>&lt;h1 id=&#34;on-small&#34;&gt;On Small&lt;/h1&gt;&#xA;&lt;p&gt;We all know the three bears. Not too small. Not too big. Just right.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m not certain that&amp;rsquo;s always true. Often times the middle road is often a manufactured path far in excess of the required. Orchistrated to emphasize our fear of missing out while tickling our desire to claim austerity. Neither of these human intuitions are bad per say. Missing out on something wonderful is awful indeed. The drive to find new things is why we have computation and know that certain mushrooms make mirrors look out of this world &lt;em&gt;maannnn&lt;/em&gt;. Neither is frugality or austerity. Operating within limits keeps us safe from times of famine. Creating within a strict limit produces wonderful art.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“Focusing on the wrong things&#34;</title>
+      <link>http://localhost:1313/me/posts/20231031_the_wrong_things/</link>
+      <pubDate>Mon, 30 Oct 2023 19:54:51 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20231031_the_wrong_things/</guid>
+      <description>&lt;p&gt;Lately I have been thinking a lot on what consumes my minds time. Specifically when I am consumed with things that I cannot or face insurmountable barriers too.&lt;/p&gt;&#xA;&lt;h1 id=&#34;worry&#34;&gt;Worry&lt;/h1&gt;&#xA;&lt;p&gt;It seems we have a natural tendency to worry. One of the largest complaints about the modern internet is the incessant negativity.&lt;/p&gt;&#xA;&lt;p&gt;Why is that?&lt;/p&gt;&#xA;&lt;p&gt;The same trends can be found in my day to day. I often find myself chasing goods to try to find panacea for some problem. I want emacs on my mobile. I want a laptop robust enough to take camping. There’s this belief that a perfect solution exists that will reduce the effort to none.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>“Trying a post from iOS.&#34;</title>
+      <link>http://localhost:1313/me/posts/20231014-from-iphone-test/</link>
+      <pubDate>Sat, 14 Oct 2023 19:54:51 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20231014-from-iphone-test/</guid>
+      <description>&lt;h1 id=&#34;can-i-post-easily-enough-from-my-phone&#34;&gt;Can I post easily enough from my phone?&lt;/h1&gt;&#xA;&lt;p&gt;I would enjoy being able to write something small without being tethered to my desk. I’m trying a simple markdown editor from my iPhone and Working Copy. Let’s see if this simple post can make it online via GitHub actions. Typing on here is of course sub-optimal but it’s not so bad. The quick text corrections coupled with the cuddly dog outweigh the slow speed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20231001 Pkms</title>
+      <link>http://localhost:1313/me/posts/20231001-pkms/</link>
+      <pubDate>Sun, 01 Oct 2023 21:56:51 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20231001-pkms/</guid>
+      <description>&lt;h1 id=&#34;personal-knowledge-managers&#34;&gt;Personal Knowledge Managers&lt;/h1&gt;&#xA;&lt;p&gt;I have a desire to try out one of the many knowledge managers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://obsidian.md&#34;&gt;Obsidian&lt;/a&gt;&#xA;&lt;a href=&#34;https://roamresearch.com&#34;&gt;Roam&lt;/a&gt;&#xA;&lt;a href=&#34;https://www.notion.so&#34;&gt;Notion&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;to try and organize my notes and todos and my mind in general. I&amp;rsquo;ve developed a good habit over this past year of journaling. Even before this I&amp;rsquo;ve kept a &amp;ldquo;Wiki&amp;rdquo; or at least repository of data that I sync between my computers with GIT but I have a few issues. This has already been very useful to me and these linking systems seem to be a great enhancement to that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230923 Nixos</title>
+      <link>http://localhost:1313/me/posts/20230923-nixos/</link>
+      <pubDate>Sat, 23 Sep 2023 20:28:25 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230923-nixos/</guid>
+      <description>&lt;h1 id=&#34;continue-to-improve-the-deck&#34;&gt;Continue to improve the deck&lt;/h1&gt;&#xA;&lt;p&gt;One area the steamdeck sketches me out is &amp;ldquo;security&amp;rdquo;. Not so much financial information with the store but rather the security of the data on the desktop. The only thing protecting the desktop applications is a pin number.&lt;/p&gt;&#xA;&lt;p&gt;While not the end of the world I keep a pretty sensitive todo list and information repository of files on most computers. I wouldn&amp;rsquo;t be in any trouble per say if someone gained access to it, but I&amp;rsquo;d prefer they not. I do consider the information to be private.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230922 Light in Pixel Art</title>
+      <link>http://localhost:1313/me/posts/20230922-light-in-pixel-art/</link>
+      <pubDate>Fri, 22 Sep 2023 20:00:37 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230922-light-in-pixel-art/</guid>
+      <description>&lt;h1 id=&#34;pixel-art-games&#34;&gt;Pixel art games&lt;/h1&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ve not written about this before but I&amp;rsquo;m hugely enamored with video games created with a pixel art style today. While I&amp;rsquo;m not against &amp;ldquo;big&amp;rdquo; games I do think its important to keep games accessible. I also really appreciate the detailed artwork and methods.&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-feelz&#34;&gt;The feelz&lt;/h1&gt;&#xA;&lt;p&gt;As of late one of the methods I&amp;rsquo;ve been appreciating the most is the use of light. In the age of ray tracing GPU&amp;rsquo;s its odd to do a study on pixelated lighting but here we are. Every time light and sharp contrast with the dark the feels come on for me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230921 Flatpak Is Weird</title>
+      <link>http://localhost:1313/me/posts/20230921-flatpak-is-weird/</link>
+      <pubDate>Thu, 21 Sep 2023 12:00:40 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230921-flatpak-is-weird/</guid>
+      <description>&lt;h1 id=&#34;once-upon-a-steamdeck&#34;&gt;Once upon a SteamDeck&lt;/h1&gt;&#xA;&lt;p&gt;As I continue exploring my SteamDeck I keep learning things about Linux I really never had to deal with as the &amp;ldquo;installer&amp;rdquo; or as a day to day developer using Linux tooling. The example today came up trying to get &lt;a href=&#34;https://www.emacswiki.org/emacs/InteractiveSpell&#34; title=&#34;Ispell&#34;&gt;Ispell&lt;/a&gt; working within emacs. Generally as a Linux user or even MacOS user this has been a pretty simple excursion. Within emacs usually something to the effect of:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230921 GitHub as Comments Engine?</title>
+      <link>http://localhost:1313/me/posts/20230921-github-as-comments-engine/</link>
+      <pubDate>Wed, 20 Sep 2023 22:55:17 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230921-github-as-comments-engine/</guid>
+      <description>&lt;h1 id=&#34;a-smaller-internet-for-end-users&#34;&gt;A smaller internet for end users&lt;/h1&gt;&#xA;&lt;p&gt;You know what I hate? When my perfectly fast computer struggles to render a web page which perhaps is giving me 1KB of useful information. Why is it faster for me to access the entire &lt;a href=&#34;https://web.mit.edu/6.001/6.037/sicp.pdf&#34; title=&#34;awesome CS book&#34;&gt;awesome CS book&lt;/a&gt; than it is to read two email messages on gmail? Why does my computers fan come on rendering the YouTube home page?&lt;/p&gt;&#xA;&lt;p&gt;** Bloated JavaScript Hell **&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230920 Old Oracle Article</title>
+      <link>http://localhost:1313/me/posts/20230920-old-oracle-article/</link>
+      <pubDate>Wed, 20 Sep 2023 20:48:28 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230920-old-oracle-article/</guid>
+      <description>&lt;h1 id=&#34;about-this-post&#34;&gt;About this post&lt;/h1&gt;&#xA;&lt;p&gt;This post is an older blog article I created when I tried out Medium a few years ago. The &lt;a href=&#34;https://gregpoked.medium.com/connecting-dbeaver-to-oracle-free-cloud-tier-database-with-keyfiles-ed835f990031&#34;&gt;article&lt;/a&gt; is still on the internet but I detest the fact that Medium articles are not plain text, and not portable. This is just an attempt on my part to convert said article to markdown and get it back under my control.&lt;/p&gt;&#xA;&lt;p&gt;The original post is from September 2020. I&amp;rsquo;m pretty sure this still works but I don&amp;rsquo;t interface with anything Oracle at my current job. If you have corrections&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230920 SteamDeck Fun</title>
+      <link>http://localhost:1313/me/posts/20230920-steamdeck-fun/</link>
+      <pubDate>Wed, 20 Sep 2023 16:59:53 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230920-steamdeck-fun/</guid>
+      <description>&lt;h1 id=&#34;steamdeck-fun&#34;&gt;SteamDeck Fun&lt;/h1&gt;&#xA;&lt;p&gt;The steam deck really is a great device to poke around on. It&amp;rsquo;s funky as someone with Linux experience, it is very open but it has some opinionated setup from Valve. For example it &lt;a href=&#34;https://www.phoronix.com/review/steam-deck-steamos-linux&#34;&gt;uses an A/B scheme&lt;/a&gt; to roll back updates and this makes installing anything with Pamac/Pacman weird.&lt;/p&gt;&#xA;&lt;p&gt;At the same point these things are kind of fun. It&amp;rsquo;s a new cave to explore.&lt;/p&gt;&#xA;&lt;h1 id=&#34;steamdeck-as-an-adventure&#34;&gt;SteamDeck as an adventure&lt;/h1&gt;&#xA;&lt;p&gt;Things like this make me wonder if a SteamDeck would be a better teaching tool than some of the things we commonly hand kids. Does a Chromebook or iPad ever teach you to dig in? An open but managed device like a SteamDeck lets you get in easily, the SteamOS is a polished console if you don&amp;rsquo;t go under the surface.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230918 Open Source is not enough</title>
+      <link>http://localhost:1313/me/posts/20230918-open-not-enough/</link>
+      <pubDate>Mon, 18 Sep 2023 20:24:44 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230918-open-not-enough/</guid>
+      <description>&lt;h1 id=&#34;the-internet-is-becoming-enshittified&#34;&gt;The internet is becoming enshittified&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been giving a lot of thought in the past year or so to what I see as one of the many troubles of our time. Having the ever growing mass of humanity that spends its time online, completely un-educated about being on a computer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;You know aside from the germs, global warming, endless wars and our continued tendency to crap all over anyone non-white cis male?&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20230507 Bike Ride</title>
+      <link>http://localhost:1313/me/posts/20230509-bike-trip/</link>
+      <pubDate>Tue, 09 May 2023 19:54:51 -0400</pubDate>
+      <guid>http://localhost:1313/me/posts/20230509-bike-trip/</guid>
+      <description>&lt;h1 id=&#34;getting-a-start&#34;&gt;Getting a start&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve found it difficult to get started blogging again. I want to convert over some of my old articles like my guide to using oracle wallets with dbeaver but the interest has been lagging. To get a move on I&amp;rsquo;m going to attempt to blog some more mundane items, but perhaps more fun to me.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-end-goal&#34;&gt;The end goal&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;d like to be able to complete a solo camping trip without using a car. By this autumn I would like to bike to a nearby campground, fish and camp all without a car.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Resume</title>
-      <link>/posts/resume/</link>
+      <link>http://localhost:1313/me/posts/resume/</link>
       <pubDate>Sat, 25 Mar 2023 19:11:45 -0400</pubDate>
-      
-      <guid>/posts/resume/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          My Resume on the Web # While I am not actively searching for employment at the moment I&amp;rsquo;m always interested to hear about interesting projects. Please see my resume and of course please feel free to email me with any questions.
-Contact Information: # Gregory Silverstein
-Bethlehem PA 18018
-greg.silverstein@gmail.com
-Objectives: # I look to work on interesting software projects. Who doesn&amp;rsquo;t! Specifically I enjoy projects that need help clarifying requirments and design as well as opportunities to teach less technical team memebers how to get what they really want out of a computer.
-          
-        
-        </description>
+      <guid>http://localhost:1313/me/posts/resume/</guid>
+      <description>&lt;h1 id=&#34;my-resume-on-the-web&#34;&gt;My Resume on the Web&lt;/h1&gt;&#xA;&lt;p&gt;While I am not actively searching for employment at the moment I&amp;rsquo;m always interested to hear about interesting projects. Please see my resume and of course please feel free to email me with any questions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;contact-information&#34;&gt;Contact Information:&lt;/h2&gt;&#xA;&lt;p&gt;Gregory Silverstein&lt;/p&gt;&#xA;&lt;p&gt;Bethlehem PA 18018&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:greg.silverstein@gmail.com&#34;&gt;greg.silverstein@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;objectives&#34;&gt;Objectives:&lt;/h2&gt;&#xA;&lt;p&gt;I look to work on &lt;em&gt;interesting&lt;/em&gt; software projects. Who doesn&amp;rsquo;t! Specifically I enjoy projects that need help clarifying requirments and design as well as opportunities to teach less technical team memebers how to get what they really want out of a computer. I tend to enjoy working with encryption and privacy designs, generally more towards the back end of a system.&lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>20250831 Emacs On Android is WERID</title>
+      <link>http://localhost:1313/me/posts/20250831-emacs-on-android-is-weird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/me/posts/20250831-emacs-on-android-is-weird/</guid>
+      <description>&lt;h1 id=&#34;summertime&#34;&gt;Summertime&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been away from my desk more and more as of late. Summer sun has been good to me spoiling me with choices of activities. There is a variety ranging from wanting to spend time with my dog, to actually being healthy and riding my bike frequently. All of these conspire &lt;em&gt;thankfully&lt;/em&gt; to keep me away from my computer. I&amp;rsquo;ve even been playing guitar more. These are all good things. While I could tote a laptop with me on these adventures I&amp;rsquo;ve not been.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/me/about/</guid>
+      <description>&lt;h1 id=&#34;who-is-this-dude&#34;&gt;Who is this dude?&lt;/h1&gt;&#xA;&lt;p&gt;My name is Greg. I&amp;rsquo;m a software engineer, fisherman, dog lover and I try to ride my bike.&lt;/p&gt;&#xA;&lt;p&gt;I currently work for the company &lt;a href=&#34;https://healthverity.com/&#34;&gt;Health Verity&lt;/a&gt; helping to enable analysis of medical data without violating the privacy of individuals. Currently working on &lt;a href=&#34;https://healthverity.com/audience-manager/&#34; title=&#34;HV Audience Manager&#34;&gt;HV Audience Manager&lt;/a&gt; which in short is a privacy complaint analytics environment. If you have questions about it please feel free to email me and I can get you in touch.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
