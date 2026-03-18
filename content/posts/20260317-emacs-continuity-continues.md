@@ -1,5 +1,5 @@
 ---
-title: "20250317 Emacs Continuity Continues"
+title: "20260317 Emacs Continuity Continues"
 draft: false
 ---
 
