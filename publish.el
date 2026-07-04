@@ -130,6 +130,22 @@ fisherman, dog dad, Emacs user. Below is everything I've written, newest first."
     output))
 (add-to-list 'org-export-filter-final-output-functions #'greg/fix-abs-file-links)
 
+;; Browser tab / window title: make every page read "./greg.out - <page>".
+;; Org builds <title> from #+TITLE, which is empty on the home page (it emits
+;; &lrm;) -- there we label it "Home".
+(defun greg/prefix-html-title (output backend _info)
+  (if (and (org-export-derived-backend-p backend 'html)
+           (string-match "<title>\\(.*?\\)</title>" output))
+      (let* ((inner (string-trim (match-string 1 output)))
+             (page (if (or (string= inner "") (string= inner "&lrm;"))
+                       "Home" inner)))
+        (replace-regexp-in-string
+         "<title>.*?</title>"
+         (format "<title>%s - %s</title>" greg/site-title page)
+         output t t))
+    output))
+(add-to-list 'org-export-filter-final-output-functions #'greg/prefix-html-title)
+
 ;;; --- reading post metadata ------------------------------------------------
 
 (defun greg/posts-directory ()

@@ -201,6 +201,9 @@ Key custom pieces:
   =src="file:///me/x.webp"=, which is broken on the web. =greg/fix-abs-file-links=
   is an export filter that strips the =file://= prefix so the URL stays
   root-relative. If images ever break, check that this filter is still in place.
+- *The tab title* — =greg/prefix-html-title= is an export filter that rewrites the
+  =<title>= tag to "./greg.out - <page>" on every page (the home page's #+TITLE is
+  empty, so it becomes "Home"). Change the format string there to adjust it.
 
 * Gotchas / things to remember
 :PROPERTIES:
