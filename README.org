@@ -1,0 +1,136 @@
+#+TITLE: ./greg.out
+#+OPTIONS: toc:nil
+
+Personal blog of Greg Silverstein, served at https://gsilvers.github.io/me/ .
+
+Built with Emacs + *org-publish* (no Hugo, no CI). You write =.org= files, run
+one Emacs Lisp script, and push the generated HTML. Theme is *ef-cherie*
+(Prot's [[https://github.com/protesilaos/ef-themes][ef-themes]]).
+
+- Source (=.org= + =publish.el= + CSS) lives on the *main* branch.
+- The built site lives on the *gh-pages* branch, which GitHub Pages serves.
+- =public/= is a git *worktree* attached to =gh-pages=.
+
+This README is the quick "how do I use it" guide. For the full internals
+(how =publish.el= works, the theme, re-syncing colours), see
+[[file:notes/how-this-site-works.org][notes/how-this-site-works.org]].
+
+* Writing a new post
+:PROPERTIES:
+:CUSTOM_ID: new-post
+:END:
+
+1. Create =content/posts/YYYYMMDD-slug.org= (the date prefix is just for tidy
+   sorting; the real date is in the header).
+2. Add a header:
+
+   #+BEGIN_EXAMPLE
+   ,#+TITLE: Fishing From the Canal
+   ,#+DATE: <2026-07-04>
+   ,#+DESCRIPTION: A slow morning chasing trout.   (optional; used in RSS)
+   #+END_EXAMPLE
+
+   =#+DATE:= must be an org timestamp =<...>=. Fast way: type =#+DATE: = then
+   press =C-c .= to insert today's date.
+3. Write the post. Common org bits:
+
+   #+BEGIN_EXAMPLE
+   Paragraphs, just typed normally.
+
+   ,* A Heading
+   A [[https://example.com][link]], *bold*, /italic/, =inline code=.
+
+   - a
+   - bullet list
+   #+END_EXAMPLE
+4. Images: drop the file in =static/YYYYMMDD/= and link it root-absolute:
+   =[[/me/20260704/trout.jpg]]=.
+
+* Drafts
+:PROPERTIES:
+:CUSTOM_ID: drafts
+:END:
+
+There are two independent ways to keep something unpublished:
+
+- *Source-only draft (simplest).* Edit the =.org= and push it to =main= only —
+  do *not* build or push =gh-pages=. The draft is saved and synced across your
+  devices, but it never reaches the live site because no HTML is generated.
+- *=#+DRAFT: true= flag.* Add this line to the header. It only matters *when you
+  build*: the post is left off the home page list and the RSS feed. (Its HTML is
+  still generated and reachable by direct URL — so this means "built but not
+  announced", not "hidden".)
+
+Recommended while drafting: push the =.org= to =main= only, *and* add
+=#+DRAFT: true= as a safety net, so it stays unlisted even if you happen to run a
+full build for some other post later. Remove the flag when you're ready to
+publish it.
+
+*Note:* this repo is *public*, so a draft pushed to =main= is off the website but
+its source is still visible to anyone browsing the GitHub repo. For a truly
+private draft, keep it on a local branch (=git switch -c draft/foo=) and don't
+push until it's ready.
+
+* Building & publishing
+:PROPERTIES:
+:CUSTOM_ID: publishing
+:END:
+
+Build the site (from the repo root):
+
+#+BEGIN_SRC sh
+emacs --batch --load publish.el
+#+END_SRC
+
+(Or inside Emacs: =M-x load-file RET publish.el RET=, then
+=M-x org-publish RET greg RET=.)
+
+Then ship it — commit the source, commit the built HTML from the worktree, and
+push both branches:
+
+#+BEGIN_SRC sh
+git add content static && git commit -m "post: fishing from the canal"
+
+cd public && git add -A && git commit -m "publish" && cd ..
+
+git push origin main
+git push origin gh-pages
+#+END_SRC
+
+About 30 seconds later it's live, newest-first on the home page and in the RSS
+feed.
+
+* Working from a new device (e.g. phone / Emacs on Android)
+:PROPERTIES:
+:CUSTOM_ID: new-device
+:END:
+
+A fresh clone has the =.org= source but *not* =public/= — a git worktree is
+local-only and doesn't come down with a clone. Reconnect it once per device:
+
+#+BEGIN_SRC sh
+git fetch origin gh-pages
+git worktree add public gh-pages
+#+END_SRC
+
+(If it says the branch is missing locally:
+=git worktree add -B gh-pages public origin/gh-pages=.)
+
+After that, writing and publishing are identical to any other machine. The first
+build on a new device downloads =htmlize= (for code highlighting) if you're
+online; offline just yields plainer code blocks.
+
+* Local preview
+:PROPERTIES:
+:CUSTOM_ID: preview
+:END:
+
+Every URL is absolute under =/me/=, so you can't just open =public/index.html= as
+a file. Serve it so =/me/= maps to =public/=:
+
+#+BEGIN_SRC sh
+mkdir -p /tmp/greg-preview && ln -sfn "$PWD/public" /tmp/greg-preview/me
+cd /tmp/greg-preview && python3 -m http.server 8777
+#+END_SRC
+
+Then open http://127.0.0.1:8777/me/ .
