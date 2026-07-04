@@ -78,6 +78,7 @@ fisherman, dog dad, Emacs user. Below is everything I've written, newest first."
 (setq org-html-head
       (concat
        (format "<link rel=\"stylesheet\" href=\"%s/css/style.css\">\n" greg/url-prefix)
+       (format "<link rel=\"icon\" type=\"image/svg+xml\" href=\"%s/favicon.svg\">\n" greg/url-prefix)
        (format "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"%s\" href=\"%s/index.xml\">\n"
                greg/site-title greg/url-prefix)
        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"))
