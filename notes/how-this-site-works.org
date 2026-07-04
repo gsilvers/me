@@ -1,0 +1,220 @@
+#+TITLE: How ./greg.out works (org-publish edition)
+#+AUTHOR: Greg Silverstein
+#+STARTUP: overview
+
+This document explains how the blog is built now that it uses Emacs + org-publish
+instead of Hugo. It is *not* published — it lives in =notes/=, which is outside
+=content/=, so the build never touches it. Read it whenever you forget how a piece
+works.
+
+* The big picture
+:PROPERTIES:
+:CUSTOM_ID: big-picture
+:END:
+
+There is no Hugo and no CI build anymore. The entire site is produced by one
+Emacs Lisp file, =publish.el=, which turns the =.org= files under =content/= into
+HTML under =public/=. You build locally and push the HTML yourself.
+
+- *Source of truth* = the =.org= files + =publish.el= + =static/css/style.css=,
+  all on the =main= branch.
+- *Built site* = plain HTML/CSS, committed to the =gh-pages= branch.
+- *GitHub Pages* serves the =gh-pages= branch. Only HTML is ever public-facing;
+  your =.org= source lives on =main=.
+
+The site is a GitHub *project* page, served under the =/me/= path
+(https://gsilvers.github.io/me/). That is why every internal link and asset URL
+starts with =/me/=. If you ever move to a root domain, change =greg/url-prefix=
+and =greg/base-url= at the top of =publish.el=.
+
+* Repository layout
+:PROPERTIES:
+:CUSTOM_ID: layout
+:END:
+
+#+BEGIN_EXAMPLE
+me/
+├── publish.el              ← the whole build system
+├── content/                ← ORG SOURCE (what you edit)
+│   ├── index.org           ← AUTO-GENERATED home page (do not edit; see below)
+│   ├── about.org
+│   ├── resume.org          ← top-level page, linked in the nav
+│   └── posts/
+│       └── YYYYMMDD-slug.org
+├── static/                 ← copied verbatim into the site root
+│   ├── css/style.css       ← the ef-cherie theme
+│   └── YYYYMMDD/...         ← post images
+├── notes/                  ← NOT published (this file lives here)
+├── public/                 ← BUILD OUTPUT = a git worktree on the gh-pages branch
+└── .build/elpa/            ← private package dir (htmlize); gitignored
+#+END_EXAMPLE
+
+* Writing a new post
+:PROPERTIES:
+:CUSTOM_ID: new-post
+:END:
+
+1. Create =content/posts/YYYYMMDD-some-slug.org=.
+2. Give it a header:
+
+   #+BEGIN_EXAMPLE
+   ,#+TITLE: My Post Title
+   ,#+DATE: <2026-07-02>
+   ,#+DESCRIPTION: One-line summary (optional; used in the RSS feed).
+
+   First paragraph...
+   #+END_EXAMPLE
+
+3. The =#+DATE:= must be an org active timestamp =<YYYY-MM-DD>=. It drives the
+   ordering on the home page and the pubDate in the RSS feed.
+4. Images: drop the file in =static/YYYYMMDD/= and reference it with a
+   root-absolute path, e.g. =[[/me/20260702/photo.jpg]]=.
+5. To mark something unfinished, add =#+DRAFT: true= — it will be skipped in the
+   home list and the RSS feed. (It still exports to HTML if you build it, but is
+   not linked anywhere.)
+
+You do *not* edit =content/index.org= — it is regenerated on every build from the
+list of posts (see [[#internals]]).
+
+* Building the site
+:PROPERTIES:
+:CUSTOM_ID: building
+:END:
+
+From a shell in the repo root:
+
+#+BEGIN_SRC sh
+emacs --batch --load publish.el
+#+END_SRC
+
+Or inside Emacs: =M-x load-file RET publish.el RET=, then =M-x org-publish-all=.
+(=org-publish-use-timestamps-flag= is nil, so every build is a full rebuild — the
+site is tiny, so this is fine and avoids stale-cache confusion.)
+
+The first build downloads =htmlize= into =.build/elpa/= for code highlighting. If
+you are offline it silently skips it; code blocks just render without colour.
+
+* Previewing locally
+:PROPERTIES:
+:CUSTOM_ID: preview
+:END:
+
+Because every URL is absolute under =/me/=, you cannot just open =public/index.html=
+as a file — the =/me/= paths won't resolve. Serve it so that =/me/= maps to
+=public/=:
+
+#+BEGIN_SRC sh
+# one-time: make a preview root where /me points at public/
+mkdir -p /tmp/greg-preview && ln -sfn "$PWD/public" /tmp/greg-preview/me
+# serve it
+cd /tmp/greg-preview && python3 -m http.server 8777
+#+END_SRC
+
+Then open http://127.0.0.1:8777/me/ .
+
+* Publishing (deploying to GitHub Pages)
+:PROPERTIES:
+:CUSTOM_ID: publishing
+:END:
+
+=public/= is a *git worktree* attached to the =gh-pages= branch. That means the
+same folder your build writes into is a checkout of the branch GitHub Pages
+serves. So publishing is: build, then commit inside =public/= and push.
+
+#+BEGIN_SRC sh
+# 1. write/commit your source on main
+git add content/ && git commit -m "post: something"
+
+# 2. build
+emacs --batch --load publish.el
+
+# 3. ship the generated HTML from the worktree
+cd public
+git add -A && git commit -m "publish"
+git push origin gh-pages
+cd ..
+#+END_SRC
+
+=main= never contains built HTML; =gh-pages= never contains =.org= source. Both
+live in the same repository, just on different branches.
+
+GitHub Pages must be set (once) to: *Settings → Pages → Build and deployment →
+Source: Deploy from a branch → Branch: =gh-pages= / =(root)=*.
+
+* The theme (ef-cherie)
+:PROPERTIES:
+:CUSTOM_ID: theme
+:END:
+
+All styling is in =static/css/style.css=. The colours are the *ef-cherie* palette
+from Prot's ef-themes (https://github.com/protesilaos/ef-themes), copied into CSS
+custom properties (the =:root { --bg-main: ... }= block at the top).
+
+Code-block colours use htmlize's CSS output: Emacs font-lock face names become
+classes like =.org-keyword=, =.org-string=, =.org-comment=, which the stylesheet
+maps to ef-cherie colours.
+
+** Re-syncing the theme after an upstream change
+:PROPERTIES:
+:CUSTOM_ID: resync
+:END:
+
+The palette is a plain copy, so there is no live dependency on ef-themes. If Prot
+changes the colours and you want to follow, open =ef-cherie-theme.el= upstream,
+read the hex values from its palette (=bg-main=, =fg-main=, =red=, =blue=, etc.)
+and update the matching =--var= values at the top of =style.css=. Nothing else
+needs to change.
+
+To try a *different* ef-theme entirely, just swap the hex values in that =:root=
+block for another theme's palette — the variable names stay the same.
+
+* How publish.el works internally
+:PROPERTIES:
+:CUSTOM_ID: internals
+:END:
+
+Three org-publish "components", grouped under the =greg= project:
+
+- =greg-posts= — exports =content/posts/*.org= to =public/posts/*.html=. Its
+  =:completion-function= is =greg/build-rss=, which writes the RSS feed *after*
+  the posts are built.
+- =greg-pages= — exports the top-level pages =content/*.org= (index, about,
+  resume) to =public/*.html=. Its =:preparation-function= is =greg/build-index=,
+  which regenerates =content/index.org= *before* exporting, so the home page is
+  always current.
+- =greg-static= — copies =static/= (css + images) verbatim into =public/=.
+
+Key custom pieces:
+
+- *Header/footer* — =greg/preamble= and =greg/postamble= render the nav bar
+  (logo =./greg.out=, Home/About/Resume/RSS/GitHub) and the footer on every page.
+  We set =org-export-with-title nil= and render the page title + date ourselves in
+  the preamble so the markup is consistent and themeable.
+- *Home page* — =greg/build-index= scans the posts, sorts them newest-first by
+  =#+DATE=, and writes =content/index.org= (intro prose from =greg/home-intro=,
+  then an HTML =<ul class="post-list">=). Because it is generated, it is
+  gitignored and marked read-only at the top.
+- *RSS* — =greg/build-rss= hand-writes =public/index.xml= (RSS 2.0). No external
+  package (ox-rss) is required. =<description>= is the post's =#+DESCRIPTION= or,
+  failing that, its first paragraph.
+- *The file:// fix* — org exports a root-absolute link like =/me/x.webp= as
+  =src="file:///me/x.webp"=, which is broken on the web. =greg/fix-abs-file-links=
+  is an export filter that strips the =file://= prefix so the URL stays
+  root-relative. If images ever break, check that this filter is still in place.
+
+* Gotchas / things to remember
+:PROPERTIES:
+:CUSTOM_ID: gotchas
+:END:
+
+- *The =/me/= prefix is everywhere.* Links and asset URLs are absolute under
+  =/me/= because it's a project page. Local preview needs the symlink trick above.
+- *Titles used to be date-prefixed.* During the Hugo→org migration a leading date
+  token (e.g. "20250921 ") was stripped from each title, since the date now shows
+  separately. New posts: just write a clean =#+TITLE=.
+- *URLs changed from Hugo.* Old Hugo post URLs were =/me/posts/<slug>/= (folder).
+  Now they are =/me/posts/<slug>.html=. This was an accepted change during
+  migration; old bookmarks to the folder form will 404.
+- *Don't hand-edit =content/index.org=* — it's regenerated every build.
+- The private package dir =.build/elpa= and the generated =content/index.org= are
+  gitignored.

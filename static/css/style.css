@@ -1,0 +1,216 @@
+/* ./greg.out — theme: ef-cherie (protesilaos/ef-themes) mapped to CSS.
+   Palette lifted from ef-cherie-theme.el. To re-sync after an upstream change,
+   see notes/how-this-site-works.org ("Re-syncing the theme"). */
+
+:root {
+  --bg-main:  #190a0f;  /* page background (dark cherry) */
+  --bg-dim:   #291f26;  /* cards / code background       */
+  --bg-alt:   #392a2f;  /* borders / rules               */
+  --fg-main:  #d3cfcf;  /* body text                     */
+  --fg-dim:   #808898;  /* muted meta (dates)            */
+  --fg-alt:   #bf9cdf;  /* lavender secondary            */
+  --link:     #df7fff;  /* links (magenta-cooler)        */
+  --accent-0: #f470df;  /* link hover / logo (magenta)   */
+  --accent-1: #e5b76f;  /* headings (gold)               */
+  --accent-2: #a897ef;  /* blue-warmer                   */
+  --accent-3: #ff7359;  /* red                           */
+  --name:     #f59280;  /* post titles (salmon)          */
+  --keyword:  #ef80bf;  /* inline code / keywords (pink) */
+  --green:    #60b444;
+  --cyan:     #8fcfdf;
+  --modeline: #771a4f;  /* wine accent bar               */
+  --region:   #232f3f;  /* blockquote wash               */
+  --mono: ui-monospace, SFMono-Regular, Menlo, "Cascadia Code", monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--fg-main);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap, #content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--accent-0); text-decoration: underline; }
+
+/* ---- site header / nav ---- */
+.site-header {
+  border-bottom: 1px solid var(--bg-alt);
+  background: linear-gradient(var(--bg-dim), var(--bg-main));
+}
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 26px;
+  padding-bottom: 18px;
+}
+.logo {
+  font-family: var(--mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-0);
+}
+.logo:hover { text-decoration: none; color: var(--link); }
+.subtitle {
+  color: var(--fg-dim);
+  font-family: var(--mono);
+  font-size: .82rem;
+  margin-top: 4px;
+}
+.site-header nav a {
+  font-family: var(--mono);
+  font-size: .92rem;
+  margin-left: 16px;
+  color: var(--fg-alt);
+}
+.site-header nav a:first-child { margin-left: 0; }
+
+/* ---- per-page title block ---- */
+.page-head { padding-top: 34px; }
+.page-title {
+  color: var(--name);
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.page-meta {
+  color: var(--fg-dim);
+  font-family: var(--mono);
+  font-size: .85rem;
+  margin-top: 6px;
+}
+
+/* ---- content ---- */
+#content { padding-top: 28px; padding-bottom: 8px; }
+#content h1, #content h2, #content h3, #content h4 {
+  color: var(--accent-1);
+  line-height: 1.25;
+  margin-top: 2em;
+}
+#content h1 { color: var(--name); }
+#content a { border-bottom: 1px solid transparent; }
+#content p, #content li { }
+#content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--bg-alt);
+}
+figure { margin: 1.5em 0; }
+figcaption { color: var(--fg-dim); font-size: .85rem; margin-top: 6px; }
+
+hr { border: none; border-top: 1px solid var(--bg-alt); margin: 2.5em 0; }
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 12px 20px;
+  background: var(--region);
+  border-left: 3px solid var(--accent-0);
+  border-radius: 0 6px 6px 0;
+  color: var(--fg-alt);
+}
+
+/* ---- inline + block code ---- */
+code, kbd, tt {
+  font-family: var(--mono);
+  font-size: .9em;
+}
+:not(pre) > code, .verbatim {
+  color: var(--keyword);
+  background: var(--bg-dim);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+pre.src, pre.example {
+  background: var(--bg-dim);
+  border: 1px solid var(--bg-alt);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: .88rem;
+  line-height: 1.5;
+  position: relative;
+}
+pre.src code { color: var(--fg-main); background: none; padding: 0; }
+
+/* htmlize (org-html-htmlize-output-type 'css) token colors */
+pre .org-keyword            { color: var(--keyword); }
+pre .org-string             { color: var(--green); }
+pre .org-comment,
+pre .org-comment-delimiter,
+pre .org-doc                { color: var(--fg-dim); font-style: italic; }
+pre .org-function-name      { color: var(--accent-2); }
+pre .org-variable-name      { color: var(--name); }
+pre .org-type               { color: var(--accent-1); }
+pre .org-constant           { color: var(--cyan); }
+pre .org-builtin            { color: var(--link); }
+pre .org-preprocessor       { color: var(--accent-3); }
+pre .org-negation-char      { color: var(--accent-3); }
+pre .org-warning            { color: var(--accent-3); font-weight: 700; }
+
+/* ---- home page post list ---- */
+ul.post-list { list-style: none; padding: 0; margin: 1.5em 0 0; }
+ul.post-list li {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--bg-dim);
+}
+ul.post-list .date {
+  color: var(--fg-dim);
+  font-family: var(--mono);
+  font-size: .85rem;
+  white-space: nowrap;
+}
+ul.post-list a { color: var(--name); font-size: 1.05rem; }
+ul.post-list a:hover { color: var(--accent-0); }
+
+/* ---- tables ---- */
+table { border-collapse: collapse; margin: 1.5em 0; width: 100%; }
+th, td { border: 1px solid var(--bg-alt); padding: 8px 12px; text-align: left; }
+th { background: var(--bg-dim); color: var(--accent-1); }
+
+/* ---- footnotes ---- */
+.footnotes { border-top: 1px solid var(--bg-alt); margin-top: 3em; font-size: .92rem; }
+.footpara { display: inline; }
+
+/* ---- footer ---- */
+.site-footer {
+  margin-top: 4em;
+  border-top: 2px solid var(--modeline);
+  background: linear-gradient(var(--bg-main), var(--bg-dim));
+}
+.site-footer .wrap {
+  padding-top: 22px;
+  padding-bottom: 30px;
+  color: var(--fg-dim);
+  font-family: var(--mono);
+  font-size: .82rem;
+}
+.site-footer a { color: var(--fg-alt); }
+
+/* ---- small screens ---- */
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .site-header .wrap { flex-direction: column; align-items: flex-start; }
+  .site-header nav a { margin-left: 0; margin-right: 14px; }
+}

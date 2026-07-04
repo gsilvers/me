@@ -2,3 +2,5 @@ resources/*
 *.bak
 server/*
 public/
+.build/
+content/index.org

@@ -1,0 +1,16 @@
+#+TITLE: Job Posting
+#+DATE: <2026-03-18>
+
+The "agentic" coding hype is getting a bit crazy. I recieved a spam email with this job posting in it this week:
+
+#+begin_quote
+Agentic first software engineer - Vibe coder / Claude Coder - Yolo expert
+Wonder Dog
+United States
+Remote
+$125,000 - $200,000 a year - Full-time
+#+end_quote
+
+I never expected to need to fact check through job openings with Yolo in them. Best I can tell Wonder Dog does not have a real website, and hopefully is not a real company but their posting is certainly on Indeed getting circulation.
+
+What a world

@@ -1,0 +1,10 @@
+#+TITLE: Funny Webpage
+#+DATE: <2024-07-01>
+
+* This is cute now I'm hungry
+:PROPERTIES:
+:CUSTOM_ID: this-is-cute-now-im-hungry
+:END:
+[[https://rotatingsandwiches.com][Sandwiches!!]]
+
+Feed me!
