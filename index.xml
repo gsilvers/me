@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>./greg.out</title>
+<link>https://gsilvers.github.io/me/</link>
+<description>Greg Silverstein's Home on the internet</description>
+<atom:link href="https://gsilvers.github.io/me/index.xml" rel="self" type="application/rss+xml"/>
+<item>
+  <title>Job Posting</title>
+  <link>https://gsilvers.github.io/me/posts/20260318-job-posting.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20260318-job-posting.html</guid>
+  <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
+  <description>The "agentic" coding hype is getting a bit crazy. I recieved a spam email with this job posting in it this week:</description>
+</item>
+<item>
+  <title>Emacs Continuity Continues</title>
+  <link>https://gsilvers.github.io/me/posts/20260317-emacs-continuity-continues.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20260317-emacs-continuity-continues.html</guid>
+  <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+  <description>As a few months of 2026 have passed it's time I suppose to reflect upon my project, or projects I should say to be more satisfied with my computer use with a focus on my smart phone. While I am not swinging from the metaphorical treetops things have been going well. I don't find myself furiously drawn to posting blog entries from my phone... But I do find myself happier with my mobile with emacs present.</description>
+</item>
+<item>
+  <title>Continuity</title>
+  <link>https://gsilvers.github.io/me/posts/20251228-continuity.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20251228-continuity.html</guid>
+  <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+  <description>Things continue. This is to say time passes if one engages with life certain trends coalesce from your environment. Some just are but others enter your conciseness repeatedly, they continue to call for your attention. Today a diatribe on my partner's laptop triggered this sense of déjà vu in me. The orator has been lost to the ether but their point has stuck with me all day.</description>
+</item>
+<item>
+  <title>Emacs on Android Success</title>
+  <link>https://gsilvers.github.io/me/posts/20250921-emacs-on-android.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20250921-emacs-on-android.html</guid>
+  <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+  <description>My quest for mobile emacs continues as the days of summer wane. It seems early but the colorful twinge of autumn is showing. Yesterday I joined some coworkers on a nice outing on our bikes. It seemed as though as we rode the first slightly burnt yellows fringed some of the trees. As we completed our 40 miles / 65 kilometers we talked shop a bit and just our interests. It's always interesting to see how people of different ages see the possible future. As we talked I confessed my desire to teach one day when my grey outnumbers my brown. In my head I hoped to be showing my students emacs on whatever devices the future holds.</description>
+</item>
+<item>
+  <title>Too Complex</title>
+  <link>https://gsilvers.github.io/me/posts/20250901-too-complex.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20250901-too-complex.html</guid>
+  <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: tools-are-annoying
+:END:
+I made a quick post yesterday, and it was so frustrating. I use hugo because it should be fairly consistent. I am publishing a blog, I host my resume and I don't even have a real hosting server to worry about, I "just use github pages".</description>
+</item>
+<item>
+  <title>Emacs On Android is WERID</title>
+  <link>https://gsilvers.github.io/me/posts/20250831-emacs-on-android-is-weird.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20250831-emacs-on-android-is-weird.html</guid>
+  <pubDate>Sun, 31 Aug 2025 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: summertime
+:END:
+I've been away from my desk more and more as of late. Summer sun has been good to me spoiling me with choices of activities. There is a variety ranging from wanting to spend time with my dog, to actually being healthy and riding my bike frequently. All of these conspire /thankfully/ to keep me away from my computer. I've even been playing guitar more. These are all good things. While I could tote a laptop with me on these adventures I've not been.</description>
+</item>
+<item>
+  <title>Funny Webpage</title>
+  <link>https://gsilvers.github.io/me/posts/20240702_funny_page.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20240702_funny_page.html</guid>
+  <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: this-is-cute-now-im-hungry
+:END:
+[[https://rotatingsandwiches.com][Sandwiches!!]]</description>
+</item>
+<item>
+  <title>How to Blog</title>
+  <link>https://gsilvers.github.io/me/posts/20240518-how-to-blog.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20240518-how-to-blog.html</guid>
+  <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: im-torn
+:END:
+I'm having moments of indecision about how to blog and what things I use. I've been reading [[https://www.todepond.com/wikiblogarden/my-wikiblogarden/pictures/serious/][this post]] over and over. It's a great post and it challenges some of what I think of as good enough and portable enough.</description>
+</item>
+<item>
+  <title>Hugo Errors Ick</title>
+  <link>https://gsilvers.github.io/me/posts/20231229-hugo-errors-ick.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231229-hugo-errors-ick.html</guid>
+  <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+  <description>Just a little blurb here. Hugo errors are not the best. I love this tool as it allows me to write a post like this lightening fast. I had done something to my local repo and when I was running =hugo server -D= I was getting just a generic page not found error.</description>
+</item>
+<item>
+  <title>Reflecting</title>
+  <link>https://gsilvers.github.io/me/posts/20231225-reflecting.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231225-reflecting.html</guid>
+  <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: this-year
+:END:
+Is almost over. I'm not sure how I feel about the time and myself and how we did together yet. I'm doing a bit of new years reflection early. Hopefully some preparation will help me make good plans or resolutions rather than desperate prayers which will go to the waste basket.</description>
+</item>
+<item>
+  <title>Janet Rules</title>
+  <link>https://gsilvers.github.io/me/posts/20231125-janet-rules.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231125-janet-rules.html</guid>
+  <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: on-small
+:END:
+We all know the three bears. Not too small. Not too big. Just right.</description>
+</item>
+<item>
+  <title>Focusing on the Wrong Things</title>
+  <link>https://gsilvers.github.io/me/posts/20231031_the_wrong_things.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231031_the_wrong_things.html</guid>
+  <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+  <description>Lately I have been thinking a lot on what consumes my minds time. Specifically when I am consumed with things that I cannot or face insurmountable barriers too.</description>
+</item>
+<item>
+  <title>Trying a Post From iOS</title>
+  <link>https://gsilvers.github.io/me/posts/20231014-from-iphone-test.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231014-from-iphone-test.html</guid>
+  <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: can-i-post-easily-enough-from-my-phone
+:END:
+I would enjoy being able to write something small without being tethered to my desk. I'm trying a simple markdown editor from my iPhone and Working Copy. Let's see if this simple post can make it online via GitHub actions. Typing on here is of course sub-optimal but it's not so bad. The quick text corrections coupled with the cuddly dog outweigh the slow speed.</description>
+</item>
+<item>
+  <title>PKMS</title>
+  <link>https://gsilvers.github.io/me/posts/20231001-pkms.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20231001-pkms.html</guid>
+  <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: personal-knowledge-managers
+:END:
+I have a desire to try out one of the many knowledge managers.</description>
+</item>
+<item>
+  <title>NixOS</title>
+  <link>https://gsilvers.github.io/me/posts/20230923-nixos.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230923-nixos.html</guid>
+  <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: continue-to-improve-the-deck
+:END:
+One area the steamdeck sketches me out is "security". Not so much financial information with the store but rather the security of the data on the desktop. The only thing protecting the desktop applications is a pin number.</description>
+</item>
+<item>
+  <title>Light in Pixel Art</title>
+  <link>https://gsilvers.github.io/me/posts/20230922-light-in-pixel-art.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230922-light-in-pixel-art.html</guid>
+  <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: pixel-art-games
+:END:
+So I've not written about this before but I'm hugely enamored with video games created with a pixel art style today. While I'm not against "big" games I do think its important to keep games accessible. I also really appreciate the detailed artwork and methods.</description>
+</item>
+<item>
+  <title>Flatpak Is Weird</title>
+  <link>https://gsilvers.github.io/me/posts/20230921-flatpak-is-weird.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230921-flatpak-is-weird.html</guid>
+  <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: once-upon-a-steamdeck
+:END:
+As I continue exploring my SteamDeck I keep learning things about Linux I really never had to deal with as the "installer" or as a day to day developer using Linux tooling. The example today came up trying to get [[https://www.emacswiki.org/emacs/InteractiveSpell][Ispell]] working within emacs. Generally as a Linux user or even MacOS user this has been a pretty simple excursion. Within emacs usually something to the effect of:</description>
+</item>
+<item>
+  <title>Old Oracle Article</title>
+  <link>https://gsilvers.github.io/me/posts/20230920-old-oracle-article.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230920-old-oracle-article.html</guid>
+  <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: about-this-post
+:END:
+This post is an older blog article I created when I tried out Medium a few years ago. The [[https://gregpoked.medium.com/connecting-dbeaver-to-oracle-free-cloud-tier-database-with-keyfiles-ed835f990031][article]] is still on the internet but I detest the fact that Medium articles are not plain text, and not portable. This is just an attempt on my part to convert said article to markdown and get it back under my control.</description>
+</item>
+<item>
+  <title>SteamDeck Fun</title>
+  <link>https://gsilvers.github.io/me/posts/20230920-steamdeck-fun.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230920-steamdeck-fun.html</guid>
+  <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: steamdeck-fun
+:END:
+The steam deck really is a great device to poke around on. It's funky as someone with Linux experience, it is very open but it has some opinionated setup from Valve. For example it [[https://www.phoronix.com/review/steam-deck-steamos-linux][uses an A/B scheme]] to roll back updates and this makes installing anything with Pamac/Pacman weird.</description>
+</item>
+<item>
+  <title>GitHub as Comments Engine?</title>
+  <link>https://gsilvers.github.io/me/posts/20230921-github-as-comments-engine.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230921-github-as-comments-engine.html</guid>
+  <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: a-smaller-internet-for-end-users
+:END:
+You know what I hate? When my perfectly fast computer struggles to render a web page which perhaps is giving me 1KB of useful information. Why is it faster for me to access the entire [[https://web.mit.edu/6.001/6.037/sicp.pdf][awesome CS book]] than it is to read two email messages on gmail? Why does my computers fan come on rendering the YouTube home page?</description>
+</item>
+<item>
+  <title>Open Source is not enough</title>
+  <link>https://gsilvers.github.io/me/posts/20230918-open-not-enough.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230918-open-not-enough.html</guid>
+  <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: the-internet-is-becoming-enshittified
+:END:
+I've been giving a lot of thought in the past year or so to what I see as one of the many troubles of our time. Having the ever growing mass of humanity that spends its time online, completely un-educated about being on a computer.</description>
+</item>
+<item>
+  <title>Bike Ride</title>
+  <link>https://gsilvers.github.io/me/posts/20230509-bike-trip.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20230509-bike-trip.html</guid>
+  <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+  <description>:PROPERTIES:
+:CUSTOM_ID: getting-a-start
+:END:
+I've found it difficult to get started blogging again. I want to convert over some of my old articles like my guide to using oracle wallets with dbeaver but the interest has been lagging. To get a move on I'm going to attempt to blog some more mundane items, but perhaps more fun to me.</description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flatpak Is Weird</title>
+<meta name="author" content="Greg Silverstein" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/me/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="./greg.out" href="/me/index.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="site-header"><div class="wrap"><div class="brand"><a class="logo" href="/me/">./greg.out</a><div class="subtitle">Greg Silverstein's Home on the internet</div></div><nav><a href="/me/">Home</a><a href="/me/about.html">About</a><a href="/me/resume.html">Resume</a><a href="/me/index.xml">RSS</a><a href="https://github.com/gsilvers">GitHub</a></nav></div></header><div class="wrap page-head"><h1 class="page-title">Flatpak Is Weird</h1><div class="page-meta">2023-09-21</div></div>
+</div>
+<div id="content" class="content">
+<section id="outline-container-once-upon-a-steamdeck" class="outline-2">
+<h2 id="once-upon-a-steamdeck">Once upon a SteamDeck</h2>
+<div class="outline-text-2" id="text-once-upon-a-steamdeck">
+<p>
+As I continue exploring my SteamDeck I keep learning things about Linux I really never had to deal with as the "installer" or as a day to day developer using Linux tooling. The example today came up trying to get <a href="https://www.emacswiki.org/emacs/InteractiveSpell">Ispell</a> working within emacs. Generally as a Linux user or even MacOS user this has been a pretty simple excursion. Within emacs usually something to the effect of:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"aspell"</span>)
+</pre>
+</div>
+
+<p>
+added to your config gets the tool pointing at the right program and a simple:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">brew install aspell
+</pre>
+</div>
+
+<p>
+pick your poison for package manager gets the actual software installed an on your path. This all gets messy however if and when you use Emacs from a Flatpak. <a href="https://flatpak.org/">Flatpak</a> in case you didn't know is an open source, Linux friendly answer to packing per application dependencies. While many Linux package managers and Unixes in general tend to drive applications to share libraries in something like <code>/usr/lib</code> Windows traditionally encouraged developers to package dependencies with their installers, locally within the space of the application.
+</p>
+
+<p>
+This obviously uses a lot more disk space but in the age of pennies cheap storage this is much less of a concern than say, developers not pinning a dependency version properly.
+</p>
+
+<p>
+Flatpak solves this and one thing it does that is "fun" is your application gets its own "sandbox" such that <code>/</code> for your application is not the same <code>/</code> as the rest of your system. This can cause some fun things for applications that call other applications like perhaps a terminal emulator but certainly Emacs. Emacs flatpak seems to know by default where the system /usr/bin etc are but when such programs have their own shared resources such as Aspell's dictionaries in <code>/usr/lib/aspell</code> things get fun. Emacs can invoke aspell but gets an error in the form of <code>Error: No word lists can be found for the language "en_US"</code>.
+</p>
+
+<p>
+Thankfully aspell has a handy <code>aspell dump dicts</code> and <code>aspell dump config</code> to let you poke at the issues. Likewise emacs has its venerable describe-variable which lets you browse the various ispell/aspell settings available for configuration. This exposes quite a few ways to fix the issue but a simple one is:
+</p>
+
+<ol class="org-ol">
+<li>Create a aspell.conf file which tells a flatpak program where the dictionary is outside of the sandbox. FYI Flatpak can access the host's files via the path <code>/var/run/host/&lt;rest-of-the-path</code>.</li>
+<li>Tweak your emacs config to run aspell this way.</li>
+</ol>
+
+<p>
+The aspell.conf file can be as simple as:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-conf">dict-dir /var/run/host/usr/lib/aspell-0.60
+</pre>
+</div>
+
+<p>
+Your emacs config then just needs to invoke aspell with the &#x2013;conf=file option like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"/var/run/host/usr/bin/aspell"</span>)
+
+(<span class="org-keyword">setq</span> ispell-extra-args '(<span class="org-string">"--conf=/home/deck/aspell.conf"</span>))
+</pre>
+</div>
+
+<p>
+And off you go you can spell check:
+</p>
+
+
+<figure id="org705d59e">
+<img src="/me/20230921/emacs_capture.png" alt="emacs_capture.png">
+
+<figcaption><span class="figure-number">Figure 1: </span>Screenshot of emacs with ispell running</figcaption>
+</figure>
+
+<p>
+So flatpak is a little weird, and while maybe not as easy as getting my macbook running or even an off the shelf system 76 box, it still makes sense and I'm better for the exploration.
+</p>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<footer class="site-footer"><div class="wrap">Written by Greg Silverstein &middot; theme <a href="https://github.com/protesilaos/ef-themes">ef-cherie</a> &middot; built with org-publish in GNU Emacs</div></footer>
+</div>
+</body>
+</html>

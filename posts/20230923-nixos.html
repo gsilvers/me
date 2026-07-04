@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NixOS</title>
+<meta name="author" content="Greg Silverstein" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/me/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="./greg.out" href="/me/index.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="site-header"><div class="wrap"><div class="brand"><a class="logo" href="/me/">./greg.out</a><div class="subtitle">Greg Silverstein's Home on the internet</div></div><nav><a href="/me/">Home</a><a href="/me/about.html">About</a><a href="/me/resume.html">Resume</a><a href="/me/index.xml">RSS</a><a href="https://github.com/gsilvers">GitHub</a></nav></div></header><div class="wrap page-head"><h1 class="page-title">NixOS</h1><div class="page-meta">2023-09-23</div></div>
+</div>
+<div id="content" class="content">
+<section id="outline-container-continue-to-improve-the-deck" class="outline-2">
+<h2 id="continue-to-improve-the-deck">Continue to improve the deck</h2>
+<div class="outline-text-2" id="text-continue-to-improve-the-deck">
+<p>
+One area the steamdeck sketches me out is "security". Not so much financial information with the store but rather the security of the data on the desktop. The only thing protecting the desktop applications is a pin number.
+</p>
+
+<p>
+While not the end of the world I keep a pretty sensitive todo list and information repository of files on most computers. I wouldn't be in any trouble per say if someone gained access to it, but I'd prefer they not. I do consider the information to be private.
+</p>
+
+<p>
+Luckily virtualization offers easy ways to encapsulate a more secure environment within a less secure one. It seems like <a href="https://help.gnome.org/users/gnome-boxes/stable/">Gnome Boxes</a> is available as a flatpak and can be used to set up Qemu or KMS virtual machines.
+</p>
+
+<p>
+Since this is a bit of an unreliable environment we can use something like <a href="https://nixos.org/">Nix</a> to allow us to quickly recover our configuration if steamos somehow eats our vm. I've seen alot of buzz around Nix and I'm eager to give the configuration declaration a try.
+</p>
+</div>
+</section>
+<section id="outline-container-whats-needed" class="outline-2">
+<h2 id="whats-needed">What's needed</h2>
+<div class="outline-text-2" id="text-whats-needed">
+<p>
+I think a good starting point here would be:
+</p>
+
+<ul class="org-ul">
+<li>Any old desktop environment. Likely something light like XFCE or openbox.</li>
+<li>Git</li>
+<li>OpenSSH</li>
+<li>Hugo</li>
+<li>Emacs (native compilation?)</li>
+<li>Python</li>
+</ul>
+</div>
+</section>
+<section id="outline-container-off-to-the-races" class="outline-2">
+<h2 id="off-to-the-races">Off to the races</h2>
+<div class="outline-text-2" id="text-off-to-the-races">
+<p>
+Installation is the same as any Linux distro. Once you get done you're facing:
+</p>
+
+
+<figure id="org6ac963e">
+<img src="/me/20230923/nixosvm.png" alt="nixosvm.png">
+
+<figcaption><span class="figure-number">Figure 1: </span>nixos running in vm</figcaption>
+</figure>
+
+<p>
+And here we go. I'm in and reading <a href="https://nixos.org/manual/nixos/stable/#sec-configuration-syntax">the docs</a> and it seems pretty easy at first glance. Up first you can easily try applications using:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">nix-shell -p &lt;package-name&gt;
+</pre>
+</div>
+
+<p>
+To install in the current session only an application. This seems pretty cool. Then there's a configuration file <code>/ect/nixos/configuration.nix</code> that in theory gets called up by <code>nixos-rebuild</code>. The language for this file is dictionary/json/yaml like in that it just represents an object notation with some templates etc to abstract away repeated things.
+</p>
+</div>
+</section>
+<section id="outline-container-first-steps" class="outline-2">
+<h2 id="first-steps">First steps</h2>
+<div class="outline-text-2" id="text-first-steps">
+<p>
+Lets try to get emacs running first. In theory all that's needed to get Emacs 29 installed (and repeatedly if we sync this file) is update our nix file:
+</p>
+
+
+<figure id="orgd322b1b">
+<img src="/me/20230923/addemacs.png" alt="addemacs.png">
+
+<figcaption><span class="figure-number">Figure 2: </span>trying to add Emacs</figcaption>
+</figure>
+
+<p>
+and then run nixos-rebuild. And&#x2026;.
+</p>
+
+
+<figure id="orgff8a19f">
+<img src="/me/20230923/itworks.png" alt="itworks.png">
+
+<figcaption><span class="figure-number">Figure 3: </span>it works!</figcaption>
+</figure>
+
+<p>
+I know much in the same I can add ssh, git etc and get my system bootstrapped in a repeatable way. I'm not certain what can be done to say automate adding SSH keys and fetching from GitHub. Perhaps at the very least I can have some scripts created automatically to save the shell commands.
+</p>
+
+<p>
+I'm going to keep plugging away at this for the next bit, it seems very fun. I should be able to get a working, more secure vm before my next checkin.
+</p>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<footer class="site-footer"><div class="wrap">Written by Greg Silverstein &middot; theme <a href="https://github.com/protesilaos/ef-themes">ef-cherie</a> &middot; built with org-publish in GNU Emacs</div></footer>
+</div>
+</body>
+</html>

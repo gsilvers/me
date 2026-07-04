@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs on Android Success</title>
+<meta name="author" content="Greg Silverstein" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/me/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="./greg.out" href="/me/index.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="site-header"><div class="wrap"><div class="brand"><a class="logo" href="/me/">./greg.out</a><div class="subtitle">Greg Silverstein's Home on the internet</div></div><nav><a href="/me/">Home</a><a href="/me/about.html">About</a><a href="/me/resume.html">Resume</a><a href="/me/index.xml">RSS</a><a href="https://github.com/gsilvers">GitHub</a></nav></div></header><div class="wrap page-head"><h1 class="page-title">Emacs on Android Success</h1><div class="page-meta">2025-09-21</div></div>
+</div>
+<div id="content" class="content">
+<p>
+My quest for mobile emacs continues as the days of summer wane. It seems early but the colorful twinge of autumn is showing. Yesterday I joined some coworkers on a nice outing on our bikes. It seemed as though as we rode the first slightly burnt yellows fringed some of the trees. As we completed our 40 miles / 65 kilometers we talked shop a bit and just our interests. It's always interesting to see how people of different ages see the possible future. As we talked I confessed my desire to teach one day when my grey outnumbers my brown. In my head I hoped to be showing my students emacs on whatever devices the future holds.
+</p>
+<section id="outline-container-tools-and-reference" class="outline-2">
+<h2 id="tools-and-reference">Tools and Reference</h2>
+<div class="outline-text-2" id="text-tools-and-reference">
+<p>
+Emacs on android has been a fun adventure over the past month. In some ways I feel I am in love with computing again. My favorite computer of today lets me solve problems where I am wherever I am. I feel like I should give back some perhaps centralize some documentation. Perhaps it will help someone else follow their dreams and get graphical emacs from the park.
+</p>
+
+<p>
+When setting up emacs I used a bunch of common tools and android software:
+<a href="https://github.com/fornwall/apksigner">APK Signer</a>
+<a href="https://termux.dev/en/">Termux</a>
+<a href="https://github.com/termux">Termux Repo</a>
+<a href="https://grapheneos.org">Graphene OS</a>
+</p>
+
+<p>
+I also partook in some internet discussion and referenced some great articles and posts:
+<a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs Wiki Android Page</a>
+<a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/">Wei's Emacs Builds</a>
+<a href="https://kristofferbalintona.me/posts/202505291438/">Kristoffer's Excellent Blog Post</a>
+<a href="https://www.reddit.com/r/emacs/comments/1kykjq2/emacs_on_android_is_pretty_good/">Reddit Discussion On That Post</a>
+<a href="https://protesilaos.com/codelog/2025-09-07-prot-asks-greg-emacs-android-fishing-dogs-pennsylvania/">My Conversation With Prot</a>
+<a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/">Marek's page</a>
+</p>
+
+<p>
+All of these really helped me out but a special mention for my conversation with Prot, while I did not "do" or "learn" anything there. The discussion helped settle my resolve to keep working on this.
+</p>
+</div>
+</section>
+<section id="outline-container-some-notes-for-others" class="outline-2">
+<h2 id="some-notes-for-others">Some Notes For Others</h2>
+<div class="outline-text-2" id="text-some-notes-for-others">
+<p>
+The above links can probably get you what you need to get emacs on any android phone. Honestly if you don't care about git and tools just the fdroid app store can get you there. Emacs to me however is part of a pair and its friend is the shell. If you read Kristoffer's blog and poke around you can get emacs integrated with termux for a decent shell environment.
+</p>
+
+<p>
+Android is kind of interesting. Apps a sequestered from one another. They do not see each others files unless you explicitly share them in a linked folder of sorts like home. This means if an app is a terminal emulator like termux, its bash and get and whotnot are not visible to Emacs. This is a security feature designed on top of a linux core. It however is not what emacs expects of a default unix-ey world. It is likely that you could compile binaries statically linked and place them in emacs's folder on android and get around this. You can however trick android. You can sign termux with Emacs's signing key and alter the emacs apk to say it is from the same "sharedUserID" and voila emacs is allowed to read termux's files. This is a bit hacky, I'm not sure if I will use it forever but it works for now. Now if you are on a newer android install the termux from <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/">Wei's Emacs Builds</a> will not work. Here is the process I followed to success on graphene (as of 2025-09-22) running on a pixel 9a.
+</p>
+
+<ol class="org-ol">
+<li>Sign Termux. You need to have termux signed with emacs's key.
+<ol class="org-ol">
+<li>Install Termux from fdroid.</li>
+<li>In termux install apksigner. <code>pkg install apksigner</code></li>
+<li>Download the <a href="https://github.com/termux/termux-app/releases">termux apk</a></li>
+<li>Download (raw) the <a href="https://git.savannah.gnu.org/cgit/emacs.git/tree/java/emacs.keystore">emacs signing key</a></li>
+<li>Sign the Termux APK with this something like <code>apksigner sign --ks -keystore emacs.keystore termux.apk</code></li>
+<li>Delete your initial termux and install this one</li>
+</ol></li>
+<li>Install Git and whatnot in termux <code>apk install git</code> and so on&#x2026;</li>
+<li>Install emacs.
+<ol class="org-ol">
+<li>Download and install the proper emacs build from <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/termux">Wei's Emacs Builds</a>. This is critical. Wei's emacs builds put the same <code>sharedUserId</code> from termux in the emacs <code>AndroidManifest.xml</code>.</li>
+</ol></li>
+<li><p>
+Configure and use emacs.
+</p>
+<ol class="org-ol">
+<li>You must have this:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(setenv <span class="org-string">"PATH"</span> (format <span class="org-string">"%s:%s"</span> <span class="org-string">"/data/data/com.termux/files/usr/bin"</span>
+ (getenv <span class="org-string">"PATH"</span>)))
+ (push <span class="org-string">"/data/data/com.termux/files/usr/bin"</span> exec-path)
+</pre>
+</div>
+
+<p>
+in your emacs config so your path is right. Then have at it.
+</p></li>
+</ol>
+</div>
+</section>
+<section id="outline-container-and-so-on" class="outline-2">
+<h2 id="and-so-on">And So On</h2>
+<div class="outline-text-2" id="text-and-so-on">
+<p>
+And that's it so far. This is great. Emacs and frankly programming on a desktop are wonderful. What's better is programming on the go. I've been able to replace <a href="https://www.strava.com/">Strava</a>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">log-bike-ride</span> (duration distance elevation)
+  <span class="org-doc">"Prompt for a bike ride log and append it to ~/bike_log.csv.
+Prompts for DURATION, DISTANCE, and ELEVATION gained, and appends
+a line to the file with today's date."</span>
+  (interactive
+   (list
+    (read-string <span class="org-string">"Duration (e.g., 1h30m): "</span>)
+    (read-string <span class="org-string">"Distance (km or mi): "</span>)
+    (read-string <span class="org-string">"Elevation gain (m or ft): "</span>)))
+  (<span class="org-keyword">let*</span> ((date (format-time-string <span class="org-string">"%Y-%m-%d"</span>))
+         (line (format <span class="org-string">"%s,%s,%s,%s\n"</span> date duration distance elevation))
+         (file (expand-file-name <span class="org-string">"~/bike_log.csv"</span>)))
+    (<span class="org-keyword">with-temp-buffer</span>
+      (insert line)
+      (append-to-file (point-min) (point-max) file))
+    (message <span class="org-string">"Logged ride on %s."</span> date)))
+</pre>
+</div>
+
+<p>
+:D
+</p>
+
+<p>
+I'm honestly only slightly kidding. Mobile devices are computing for so much more of the world than laptops or desktops. And these devices are SO NOT FREE. Or freeing. Applications like Strava lock users down and if we're not careful our next generations will never know the freedom of a pocket notebook, pen and paper or a computer that they can play with. Emacs and other free software running on portable devices is essential in my eyes to present a gateway drug of configurable computing.
+</p>
+
+<p>
+I hope to play with this more and more to solve my problems, but also hopefully find a way to encourage supporting these devices and their users among the free software community.
+</p>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<footer class="site-footer"><div class="wrap">Written by Greg Silverstein &middot; theme <a href="https://github.com/protesilaos/ef-themes">ef-cherie</a> &middot; built with org-publish in GNU Emacs</div></footer>
+</div>
+</body>
+</html>

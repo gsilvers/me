@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hugo Errors Ick</title>
+<meta name="author" content="Greg Silverstein" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/me/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="./greg.out" href="/me/index.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="site-header"><div class="wrap"><div class="brand"><a class="logo" href="/me/">./greg.out</a><div class="subtitle">Greg Silverstein's Home on the internet</div></div><nav><a href="/me/">Home</a><a href="/me/about.html">About</a><a href="/me/resume.html">Resume</a><a href="/me/index.xml">RSS</a><a href="https://github.com/gsilvers">GitHub</a></nav></div></header><div class="wrap page-head"><h1 class="page-title">Hugo Errors Ick</h1><div class="page-meta">2023-12-29</div></div>
+</div>
+<div id="content" class="content">
+<p>
+Just a little blurb here. Hugo errors are not the best. I love this tool as it allows me to write a post like this lightening fast. I had done something to my local repo and when I was running <code>hugo server -D</code> I was getting just a generic page not found error.
+</p>
+
+<p>
+Turns out if you hit that and you're using a theme cloned in as a submodule you should:
+</p>
+
+<ol class="org-ol">
+<li>Run <code>hugo -v --debug -D</code> and if you see warnings about a layout not being found:</li>
+<li>Run <code>git submodule init &amp;&amp; git submodule update</code> and get your theme repaired.</li>
+</ol>
+</div>
+<div id="postamble" class="status">
+<footer class="site-footer"><div class="wrap">Written by Greg Silverstein &middot; theme <a href="https://github.com/protesilaos/ef-themes">ef-cherie</a> &middot; built with org-publish in GNU Emacs</div></footer>
+</div>
+</body>
+</html>
