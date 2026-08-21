@@ -6,6 +6,13 @@
 <description>Greg Silverstein's Home on the internet</description>
 <atom:link href="https://gsilvers.github.io/me/index.xml" rel="self" type="application/rss+xml"/>
 <item>
+  <title>Random Thoughts</title>
+  <link>https://gsilvers.github.io/me/posts/20260830-random-thoughts.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20260830-random-thoughts.html</guid>
+  <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+  <description>A brain dump as I learn to live with AI</description>
+</item>
+<item>
   <title>Job Posting</title>
   <link>https://gsilvers.github.io/me/posts/20260318-job-posting.html</link>
   <guid>https://gsilvers.github.io/me/posts/20260318-job-posting.html</guid>
