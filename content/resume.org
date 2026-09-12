@@ -74,13 +74,13 @@ Created VBA based SQL reports.
 :PROPERTIES:
 :CUSTOM_ID: skills
 :END:
-I'm a computer nerd but I will try to give a brief overview of what I am learning right now and also what I have a good deal of professional experience in.
+I'm a computer nerd, I'll learn any stack. I will try to give a brief overview of what I am learning right now and also what I have a good deal of professional experience in.
 
 *** Currently Learning
 :PROPERTIES:
 :CUSTOM_ID: currently-learning
 :END:
-Clojure, Common Lisp, Tic-80, Hugo Static Site Generator
+Clojure, Common Lisp, Tic-80, Android Development (Flutter / Dart)
 
 *** Professional Experience
 :PROPERTIES:
