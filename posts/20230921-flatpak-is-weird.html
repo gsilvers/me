@@ -24,8 +24,8 @@ As I continue exploring my SteamDeck I keep learning things about Linux I really
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"aspell"</span>)
-</pre>
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"aspell"</span>)
+</code></pre>
 </div>
 
 <p>
@@ -33,8 +33,8 @@ added to your config gets the tool pointing at the right program and a simple:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">brew install aspell
-</pre>
+<pre class="src src-sh"><code>brew install aspell
+</code></pre>
 </div>
 
 <p>
@@ -63,19 +63,19 @@ The aspell.conf file can be as simple as:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-conf">dict-dir /var/run/host/usr/lib/aspell-0.60
-</pre>
+<pre class="src src-conf"><code>dict-dir /var/run/host/usr/lib/aspell-0.60
+</code></pre>
 </div>
 
 <p>
-Your emacs config then just needs to invoke aspell with the &#x2013;conf=file option like so:
+Your emacs config then just needs to invoke aspell with the &ndash;conf=file option like so:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"/var/run/host/usr/bin/aspell"</span>)
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">setq</span> ispell-program-name <span class="org-string">"/var/run/host/usr/bin/aspell"</span>)
 
 (<span class="org-keyword">setq</span> ispell-extra-args '(<span class="org-string">"--conf=/home/deck/aspell.conf"</span>))
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -83,7 +83,7 @@ And off you go you can spell check:
 </p>
 
 
-<figure id="org59aad17">
+<figure id="org2bfb399">
 <img src="/me/20230921/emacs_capture.png" alt="emacs_capture.png">
 
 <figcaption><span class="figure-number">Figure 1: </span>Screenshot of emacs with ispell running</figcaption>

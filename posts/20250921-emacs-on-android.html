@@ -70,7 +70,7 @@ Android is kind of interesting. Apps a sequestered from one another. They do not
 <li>Sign the Termux APK with this something like <code>apksigner sign --ks -keystore emacs.keystore termux.apk</code></li>
 <li>Delete your initial termux and install this one</li>
 </ol></li>
-<li>Install Git and whatnot in termux <code>apk install git</code> and so on&#x2026;</li>
+<li>Install Git and whatnot in termux <code>apk install git</code> and so on&hellip;</li>
 <li>Install emacs.
 <ol class="org-ol">
 <li>Download and install the proper emacs build from <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/termux">Wei's Emacs Builds</a>. This is critical. Wei's emacs builds put the same <code>sharedUserId</code> from termux in the emacs <code>AndroidManifest.xml</code>.</li>
@@ -83,10 +83,10 @@ Configure and use emacs.
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-lisp">(setenv <span class="org-string">"PATH"</span> (format <span class="org-string">"%s:%s"</span> <span class="org-string">"/data/data/com.termux/files/usr/bin"</span>
+<pre class="src src-lisp"><code>(setenv <span class="org-string">"PATH"</span> (format <span class="org-string">"%s:%s"</span> <span class="org-string">"/data/data/com.termux/files/usr/bin"</span>
  (getenv <span class="org-string">"PATH"</span>)))
  (push <span class="org-string">"/data/data/com.termux/files/usr/bin"</span> exec-path)
-</pre>
+</code></pre>
 </div>
 
 <p>
@@ -103,7 +103,7 @@ And that's it so far. This is great. Emacs and frankly programming on a desktop 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-lisp">(<span class="org-keyword">defun</span> <span class="org-function-name">log-bike-ride</span> (duration distance elevation)
+<pre class="src src-lisp"><code>(<span class="org-keyword">defun</span> <span class="org-function-name">log-bike-ride</span> (duration distance elevation)
   <span class="org-doc">"Prompt for a bike ride log and append it to ~/bike_log.csv.
 Prompts for DURATION, DISTANCE, and ELEVATION gained, and appends
 a line to the file with today's date."</span>
@@ -119,7 +119,7 @@ a line to the file with today's date."</span>
       (insert line)
       (append-to-file (point-min) (point-max) file))
     (message <span class="org-string">"Logged ride on %s."</span> date)))
-</pre>
+</code></pre>
 </div>
 
 <p>
