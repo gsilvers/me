@@ -6,6 +6,13 @@
 <description>Greg Silverstein's Home on the internet</description>
 <atom:link href="https://gsilvers.github.io/me/index.xml" rel="self" type="application/rss+xml"/>
 <item>
+  <title>Book Review of Freight by Ryan Lowel</title>
+  <link>https://gsilvers.github.io/me/posts/20261024-book-review.html</link>
+  <guid>https://gsilvers.github.io/me/posts/20261024-book-review.html</guid>
+  <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+  <description>A brief review of the book Freight</description>
+</item>
+<item>
   <title>Book Review of The Language of Liars by S.L. Huang</title>
   <link>https://gsilvers.github.io/me/posts/20261012-book-review.html</link>
   <guid>https://gsilvers.github.io/me/posts/20261012-book-review.html</guid>
